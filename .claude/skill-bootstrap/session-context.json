@@ -1,0 +1,14 @@
+{
+  "schema_version": "session-context/v1",
+  "run_id": "cassandra-bootstrap-1780746945354-3a140d40ecaa8",
+  "generated_at": "2026-06-06T11:55:45.361Z",
+  "status": "success",
+  "blocking_errors": [],
+  "warnings": [],
+  "hookSpecificOutput": {
+    "hookEventName": "SessionStart",
+    "reloadSkills": true,
+    "additionalContext": "Cassandra required skill bootstrap status: success. Reports: .claude/skill-bootstrap/cache/effective_required.json, .claude/skill-bootstrap/install_report.json, .claude/skill-bootstrap/installed-plugins.json, .claude/skill-bootstrap/session-context.json. Warnings: none."
+  },
+  "warnings_summary": []
+}

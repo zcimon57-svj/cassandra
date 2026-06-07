@@ -1,0 +1,83 @@
+{
+  "schema_version": "observation-report/v1",
+  "run_id": "cassandra-bootstrap-1780746945354-3a140d40ecaa8",
+  "generated_at": "2026-06-06T19:56:26+08:00",
+  "status": "warning",
+  "blocking_errors": [],
+  "warnings": [
+    {
+      "code": "CC_ADDITIONAL_CONTEXT_EMITTED_ONLY",
+      "message": "SessionStart emitted additionalContext in session-context.json, but the Claude Code model response did not show the specific hook additionalContext text.",
+      "blocks_external_validation_pass": false,
+      "blocks_active_required_activation": false,
+      "blocks_claude_code_startup": false
+    },
+    {
+      "code": "CC_PLUGIN_MANAGER_SURFACE_NOT_OBSERVED",
+      "message": "The Claude Code plugin manager did not list rocksdb-review as an installed plugin, but the slash skill resolver did resolve /rocksdb-review without --plugin-dir.",
+      "blocks_external_validation_pass": false,
+      "blocks_active_required_activation": false,
+      "blocks_claude_code_startup": false
+    },
+    {
+      "code": "CC_NEAR_TRIGGER_NOT_OBSERVED",
+      "message": "Near-trigger and low-risk real-development prompts completed, but no skill-specific guidance was observed in the Claude Code model response.",
+      "blocks_external_validation_pass": false,
+      "blocks_active_required_activation": false,
+      "blocks_claude_code_startup": false
+    }
+  ],
+  "claude_code_version": "2.1.161 (Claude Code)",
+  "startup_directory": "/home/cimon/code/skill-management-validation-repos/cassandra",
+  "reloadSkills_emitted": true,
+  "reloadSkills_observed": "observed_true",
+  "additionalContext_emitted": true,
+  "additionalContext_observed": "emitted_only",
+  "skill_visibility": {
+    "installed_files_visible": true,
+    "managed_manifest_visible": true,
+    "skill_surface_visible": "observed_true",
+    "activation_surface_visible": "observed_true",
+    "plugin_manager_visibility": "not_observed",
+    "explicit_slash_skill_resolution": "observed_true",
+    "model_visible_skill_surface": "explicit_invocation_observed",
+    "installed_files": [
+      ".claude/skill-bootstrap/plugins/rocksdb-review/.claude-plugin/plugin.json",
+      ".claude/skill-bootstrap/plugins/rocksdb-review/activation.yml",
+      ".claude/skill-bootstrap/plugins/rocksdb-review/install-entry.md",
+      ".claude/skills/rocksdb-review/SKILL.md"
+    ],
+    "manual_notes": "File and managed-manifest visibility were confirmed locally. `claude plugin list` did not list rocksdb-review, but `claude -p` resolved `/rocksdb-review` without `--plugin-dir` and returned the RocksDB Review Skill headings/checklist themes. This proves explicit resolver visibility, not automatic model adoption."
+  },
+  "near_trigger_result": {
+    "scenario": "review a small RocksDB storage-engine change involving compaction, flush, recovery, or iterator behavior",
+    "expected_skill_family": [
+      "engine_review",
+      "review",
+      "adversarial_review"
+    ],
+    "result": "not_observed",
+    "guidance_visible": false,
+    "manual_verification_notes": "Claude Code completed the observation prompt but reported no RocksDB-specific skill, plugin, or specialized guidance visible in context.",
+    "adoption_proof_claimed": false,
+    "real_development": {
+      "repo": "zcimon57-svj/cassandra",
+      "startup_directory": "/home/cimon/code/skill-management-validation-repos/cassandra",
+      "small_requirement": "Draft a test-plan-only checklist for a storage-engine review without changing repository files.",
+      "skills_visible": {
+        "SDD": "not_observed",
+        "review": "not_observed",
+        "adversarial_review": "not_observed"
+      },
+      "hooks_context_visible": "emitted_only",
+      "near_trigger_result": {
+        "SDD": "not_observed",
+        "review": "not_observed",
+        "adversarial_review": "not_observed"
+      },
+      "manual_verification_notes": "The low-risk real-development observation was performed as a no-edit test-plan prompt. Claude Code reported generic project instructions only and no specialized checklist/review guidance surface.",
+      "language_guard": "no Prompt skill adoption proof"
+    }
+  },
+  "language_guard": "no Prompt skill adoption proof"
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "effective-required/v1",
+  "run_id": "cassandra-bootstrap-1780746945354-3a140d40ecaa8",
+  "generated_at": "2026-06-06T11:55:45.357Z",
+  "status": "success",
+  "blocking_errors": [],
+  "warnings": [],
+  "repo": "cassandra",
+  "engine": "taurus",
+  "sources": [
+    {
+      "key": "department",
+      "source": "../Mock-DBS-Skill/required/department.yml",
+      "cache_source": "fresh"
+    },
+    {
+      "key": "engine",
+      "source": "../Mock-DBS-Skill/required/engine/taurus.yml",
+      "cache_source": "fresh"
+    },
+    {
+      "key": "repo",
+      "source": "../Mock-DBS-Skill/required/repo/cassandra.yml",
+      "cache_source": "fresh"
+    }
+  ],
+  "resolved_plugins": [
+    {
+      "agentcentor_skill": "rocksdb-review",
+      "version": "3.0.10",
+      "required_scope": "engine:taurus",
+      "resolved_from": [
+        "engine:taurus"
+      ],
+      "main_tag": "dev",
+      "status": "active",
+      "artifact_hash": "sha256:bc9735065d60fb2147b443efa96dc1cdd608f92c55fc6c9fa9973a22f3e132a6"
+    }
+  ],
+  "filtered_items": [],
+  "conflicts": [],
+  "cache_source": "fresh"
+}

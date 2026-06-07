@@ -1,0 +1,13 @@
+{
+  "schema_version": "bootstrap-managed-files/v1",
+  "run_id": "cassandra-bootstrap-1780746945354-3a140d40ecaa8",
+  "generated_at": "2026-06-06T11:55:45.361Z",
+  "agentcentor_skill": "rocksdb-review",
+  "version": "3.0.10",
+  "managed_files": [
+    ".claude/skill-bootstrap/plugins/rocksdb-review/.claude-plugin/plugin.json",
+    ".claude/skill-bootstrap/plugins/rocksdb-review/activation.yml",
+    ".claude/skill-bootstrap/plugins/rocksdb-review/install-entry.md",
+    ".claude/skills/rocksdb-review/SKILL.md"
+  ]
+}
